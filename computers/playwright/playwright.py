@@ -120,7 +120,7 @@ class PlaywrightComputer(Computer):
             }
         )
         self._page = self._context.new_page()
-        self._page.goto(self._initial_url)
+        self._page.goto(self._initial_url, timeout=60000)
 
         self._context.on("page", self._handle_new_page)
 

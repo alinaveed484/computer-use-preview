@@ -27,10 +27,23 @@ from google.genai.types import (
 import time
 from rich.console import Console
 from rich.table import Table
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # loads from .env    
+
+
+# from openinference.instrumentation.google_genai import GoogleGenAIInstrumentor
+# GoogleGenAIInstrumentor().instrument()
+
+# from langfuse import get_client
+ 
+# # Initialise Langfuse client and verify connectivity
+# langfuse = get_client()
 
 from computers import EnvState, Computer
 
-MAX_RECENT_TURN_WITH_SCREENSHOTS = 3
+MAX_RECENT_TURN_WITH_SCREENSHOTS = 1
 PREDEFINED_COMPUTER_USE_FUNCTIONS = [
     "open_web_browser",
     "click_at",
